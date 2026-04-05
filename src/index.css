@@ -1,6 +1,18 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-html {
+
+/* GLOBAL RESET + BACKGROUND */
+html, body, #root {
+  margin: 0;
+  padding: 0;
+  background-color: black;
   scroll-behavior: smooth;
+}
+
+/* OPTIONAL: Better font rendering */
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }

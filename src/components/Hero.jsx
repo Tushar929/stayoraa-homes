@@ -9,29 +9,29 @@ export default function Hero() {
   return (
     <section className="relative h-screen w-full bg-black overflow-hidden">
 
-      {/* DESKTOP VIEW */}
+      {/* DESKTOP IMAGE */}
       <img
         src={fullImg}
         alt="Interior"
-        className="hidden md:block absolute w-full h-full object-cover"
+        className="hidden md:block absolute w-full h-full object-cover object-center"
       />
 
-      {/* MOBILE VIEW */}
+      {/* MOBILE IMAGE */}
       <div className="md:hidden absolute inset-0 flex items-center justify-center overflow-hidden">
         <img
           src={view === "before" ? beforeImg : afterImg}
           alt="Interior"
-          className="w-full h-full object-cover object-center scale-110"
+          className="w-full h-full object-cover object-[center_20%]"
         />
       </div>
 
-      {/* DARK OVERLAY */}
-      <div className="absolute inset-0 bg-black/80"></div>
+      {/* OVERLAY */}
+      <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/80"></div>
 
       {/* CONTENT */}
       <div className="relative z-10 h-full flex flex-col justify-center items-center text-center px-6">
 
-        {/* TOGGLE (MOBILE ONLY) */}
+        {/* TOGGLE BUTTONS */}
         <div className="md:hidden flex gap-4 mb-6">
           <button
             onClick={() => setView("before")}
@@ -57,7 +57,7 @@ export default function Hero() {
         </div>
 
         {/* TEXT */}
-        <h1 className="text-3xl md:text-6xl font-bold text-white leading-snug mb-4 max-w-4xl">
+        <h1 className="text-3xl md:text-6xl font-bold text-white leading-tight mb-4 max-w-4xl">
           Turn Your Property Into a{" "}
           <span className="text-yellow-500">High-Performing Asset</span>
         </h1>
@@ -70,7 +70,7 @@ export default function Hero() {
           onClick={() =>
             document.getElementById("contact").scrollIntoView({ behavior: "smooth" })
           }
-          className="bg-yellow-500 text-black px-6 py-3 md:px-8 md:py-4 rounded-lg font-semibold"
+          className="bg-yellow-500 text-black px-6 py-3 md:px-8 md:py-4 rounded-lg font-semibold hover:scale-105 transition"
         >
           List Your Property
         </button>

@@ -17,7 +17,6 @@ function App() {
       <Services />
       <Income />
       <Contact />
-      <WhatsappFloat />
     </div>  
   );
 }
