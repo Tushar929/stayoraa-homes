@@ -1,6 +1,6 @@
 import { useState } from "react";
-import beforeImg from "../assets/before.jpg";
-import afterImg from "../assets/after.jpg";
+import beforeImg from "../assets/before.png";
+import afterImg from "../assets/after.png";
 import fullImg from "../assets/interior.jpeg";
 
 export default function Hero() {
