@@ -2,21 +2,22 @@ import bg from "../assets/interior.jpeg";
 
 export default function Hero() {
   return (
-    <section className="relative h-screen w-full overflow-hidden">
-      {/* BACKGROUND IMAGE */}
+    <section className="relative h-screen w-full bg-black overflow-hidden">
+
+      {/* IMAGE (NO CROPPING) */}
       <img
         src={bg}
         alt="Interior"
-        className="absolute w-full h-full object-cover"
+        className="absolute w-full h-full object-contain"
       />
 
       {/* DARK OVERLAY */}
-      <div className="absolute inset-0 bg-black/60"></div>
+      <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/80"></div>
 
-      <div className="absolute top-0 left-1/2 w-[2px] h-full bg-black opacity-50"></div>
       {/* CONTENT */}
       <div className="relative z-10 h-full flex flex-col justify-center items-center text-center px-6">
-        <h1 className="text-4xl md:text-6xl font-bold text-white leading-tight mb-6">
+
+        <h1 className="text-4xl md:text-6xl font-bold text-white leading-tight mb-6 max-w-5xl">
           Turn Your Property Into a{" "}
           <span className="text-yellow-500">High-Performing Asset</span>
         </h1>
@@ -35,7 +36,9 @@ export default function Hero() {
         >
           List Your Property
         </button>
+
       </div>
+
     </section>
   );
 }
