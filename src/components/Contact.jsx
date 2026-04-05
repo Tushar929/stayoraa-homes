@@ -25,20 +25,26 @@ Property: ${form.property}`;
   };
 
   return (
-    <section id="contact" className="bg-white py-20 px-6">
+    <section id="contact" className="bg-black text-white py-24 px-6">
       <div className="max-w-3xl mx-auto text-center">
-        
-        <h2 className="text-4xl font-bold mb-8">
+
+        {/* HEADING */}
+        <h2 className="text-4xl md:text-5xl font-bold mb-6">
           List Your Property
         </h2>
 
+        <p className="text-gray-400 mb-10">
+          Share your details and our team will get in touch with you shortly.
+        </p>
+
+        {/* FORM */}
         <form onSubmit={handleSubmit} className="space-y-6">
-          
+
           <input
             type="text"
             name="name"
             placeholder="Your Name"
-            className="w-full p-4 border rounded-lg"
+            className="w-full p-4 rounded-lg bg-gray-900 border border-gray-700 focus:outline-none focus:border-yellow-500"
             onChange={handleChange}
             required
           />
@@ -47,7 +53,7 @@ Property: ${form.property}`;
             type="tel"
             name="phone"
             placeholder="Phone Number"
-            className="w-full p-4 border rounded-lg"
+            className="w-full p-4 rounded-lg bg-gray-900 border border-gray-700 focus:outline-none focus:border-yellow-500"
             onChange={handleChange}
             required
           />
@@ -56,14 +62,14 @@ Property: ${form.property}`;
             type="text"
             name="property"
             placeholder="Property Location"
-            className="w-full p-4 border rounded-lg"
+            className="w-full p-4 rounded-lg bg-gray-900 border border-gray-700 focus:outline-none focus:border-yellow-500"
             onChange={handleChange}
             required
           />
 
           <button
             type="submit"
-            className="bg-gold text-black px-8 py-4 rounded-lg font-semibold hover:scale-105 transition w-full"
+            className="w-full bg-yellow-500 text-black px-8 py-4 rounded-lg font-semibold hover:scale-105 transition"
           >
             Submit via WhatsApp
           </button>
