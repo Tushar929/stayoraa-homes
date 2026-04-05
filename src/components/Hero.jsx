@@ -9,27 +9,29 @@ export default function Hero() {
   return (
     <section className="relative h-screen w-full bg-black overflow-hidden">
 
-      {/* DESKTOP VIEW (FULL IMAGE) */}
+      {/* DESKTOP VIEW */}
       <img
         src={fullImg}
         alt="Interior"
-        className="hidden md:block absolute w-full h-full object-contain"
+        className="hidden md:block absolute w-full h-full object-cover"
       />
 
-      {/* MOBILE VIEW (TOGGLE IMAGE) */}
-      <img
-        src={view === "before" ? beforeImg : afterImg}
-        alt="Interior"
-        className="md:hidden absolute w-full h-full object-cover"
-      />
+      {/* MOBILE VIEW */}
+      <div className="md:hidden absolute inset-0 flex items-center justify-center overflow-hidden">
+        <img
+          src={view === "before" ? beforeImg : afterImg}
+          alt="Interior"
+          className="w-full h-full object-cover object-center scale-110"
+        />
+      </div>
 
-      {/* OVERLAY */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/80"></div>
+      {/* DARK OVERLAY */}
+      <div className="absolute inset-0 bg-black/80"></div>
 
       {/* CONTENT */}
       <div className="relative z-10 h-full flex flex-col justify-center items-center text-center px-6">
 
-        {/* TOGGLE BUTTONS (MOBILE ONLY) */}
+        {/* TOGGLE (MOBILE ONLY) */}
         <div className="md:hidden flex gap-4 mb-6">
           <button
             onClick={() => setView("before")}
@@ -55,7 +57,7 @@ export default function Hero() {
         </div>
 
         {/* TEXT */}
-        <h1 className="text-3xl md:text-6xl font-bold text-white leading-tight mb-4 max-w-4xl">
+        <h1 className="text-3xl md:text-6xl font-bold text-white leading-snug mb-4 max-w-4xl">
           Turn Your Property Into a{" "}
           <span className="text-yellow-500">High-Performing Asset</span>
         </h1>
